@@ -13,5 +13,6 @@ export default defineConfig({
 			styles: '/src/styles',
 			store: '/src/store'
 		}
-	}
+	},
+	base: '/at-work/'
 })
