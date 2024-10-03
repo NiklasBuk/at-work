@@ -20,7 +20,7 @@ const TextField: FC<TextField> = ({ title, name, prop }) => {
 					name={name}
 					className='textfield_input'
 					value={fieldValue}
-					onChange={e => setFieldValue(e.target.value)}
+					onChange={e => setFieldValue(e.target.value.trim())}
 					required
 				/>
 				{fieldValue && (
