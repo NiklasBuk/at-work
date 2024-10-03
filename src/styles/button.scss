@@ -1,0 +1,22 @@
+@import 'variables.scss';
+
+.custom-button {
+	display: flex;
+	justify-content: center;
+	background-color: $color-black;
+	color: $color-white;
+	padding: 12px 42px;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: 0.3s ease-out;
+	&:active {
+		color: $color-black;
+	}
+}
+
+@media (hover: hover) {
+	.custom-button:hover {
+		background-color: $color-grey01;
+		color: $color-black;
+	}
+}

@@ -1,50 +1,39 @@
-# React + TypeScript + Vite
+Тестовое задание на позицию Frontend-разработчик (React)
+Описание
+Тестовое задание для Frontend
+Разработать интерфейс двухстраничного приложения на React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Описание главной страницы
+Отображает список пользователей, которых можно получить с https://jsonplaceholder.typicode.com/ по роуту /users
+Достаточно вывести первые 6 пользователей
+Каждая карточка содержит:
+- Username
+- City
+- Company name
+- Аватарка (любая картинка, можно свою)
+  Действия с карточкой:
+- Редактировать (переносит на страницу изменения данных пользователя)
+- Архивировать (переносит карточку в секцию Архив)
+- Скрыть (Убирает карточку из списка)
+  Данные могут сбрасываться после перезагрузки
+  Во время загрузки данных отобразить сообщение об этом, либо loader
+  Карточку из архива можно сделать активной, карточка возвращается в секцию активные
 
-Currently, two official plugins are available:
+Описание страницы редактирования
+Должна содержать:
+- Name
+- Username
+- Email
+- City
+- Phone (выводить в том же виде, в котором приходит с api)
+- Company Name
+- Аватарка (любая картинка, можно свою)
+  Во время загрузки данных отобразить сообщение об этом, либо loader
+  На странице можно менять данные и сохранять изменения
+  Валидация: поля не должны быть пустыми
+  При нажатии на кнопку сохранить и успешной валидации появляется попап с сообщением, попап закрывается при нажатии на крестик, либо через 4 секунды
+  Изменения могут не сохраняться после перезагрузки и переходе на главную страницу
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Технические требования
+Использовать React и Redux Toolkit
+Для роутинга использовать React Router v6

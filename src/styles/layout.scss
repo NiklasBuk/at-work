@@ -1,0 +1,18 @@
+@import 'variables.scss';
+
+.main {
+	&_container {
+		background-color: $color-grey01;
+		min-height: 100vh;
+	}
+	&_inner-container {
+		max-width: 1160px;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 376px) {
+	.main_inner-container {
+		max-width: 344px;
+	}
+}

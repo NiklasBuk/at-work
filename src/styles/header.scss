@@ -1,0 +1,77 @@
+@import 'variables.scss';
+
+.header {
+	padding: 10px;
+	height: clamp(50px, 7vh, 56px);
+	display: flex;
+	align-items: center;
+	background-color: $color-white;
+	//margin-bottom: 40px;
+	&_inner-container {
+		width: 1160px;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&_logo {
+		font-size: 20px;
+		& a {
+			cursor: pointer;
+			text-decoration: none;
+			color: $color-black;
+			display: flex;
+			align-items: center;
+		}
+		& img {
+			width: 24px;
+			height: 24px;
+			margin-right: 9px;
+		}
+	}
+	&_user {
+		display: flex;
+		justify-content: space-between;
+		&__notification {
+			display: flex;
+			column-gap: 8px;
+			& img {
+				height: 22px;
+				width: 22px;
+				cursor: pointer;
+				&:hover {
+					filter: drop-shadow(2px 2px 2px $color-accent);
+				}
+			}
+		}
+		&__profile {
+			display: flex;
+			align-items: center;
+			margin-left: 24px;
+			& img {
+				height: 20px;
+				width: 20px;
+				border-radius: 50%;
+			}
+			& span {
+				color: $color-grey04;
+				font-size: 16px;
+				margin-left: 10px;
+			}
+		}
+	}
+}
+
+@media (max-width: 376px) {
+	.header {
+		&_inner-container {
+			max-width: 344px;
+		}
+		&_user__notification {
+			display: none;
+		}
+		&_user__profile span {
+			display: none;
+		}
+	}
+}

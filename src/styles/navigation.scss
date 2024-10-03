@@ -1,0 +1,21 @@
+.navigation {
+	display: flex;
+	align-items: center;
+	padding: 20px 0;
+	cursor: pointer;
+	& img {
+		margin-right: 10px;
+	}
+}
+
+@media (max-width: 1160px) {
+	.navigation {
+		padding-left: 14px;
+	}
+}
+
+@media (max-width: 540px) {
+	.navigation img {
+		margin: 0 16px;
+	}
+}

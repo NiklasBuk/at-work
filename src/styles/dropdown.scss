@@ -1,0 +1,37 @@
+@import 'variables.scss';
+
+.dropdown-container {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: clamp(130px, 20vw, 200px);
+	display: flex;
+	flex-direction: column;
+	background-color: $color-white;
+	height: fit-content;
+	padding: 8px;
+	gap: 8px;
+	border-radius: 12px;
+	box-shadow: 2px 2px 4px 1px $color-grey03;
+	z-index: 20;
+	& > span,
+	a {
+		user-select: none;
+	}
+	& a {
+		text-decoration: none;
+		color: $color-black;
+		cursor: pointer;
+	}
+	& span {
+		font-weight: 500;
+		font-size: clamp(14px, 5vw, 16px);
+		cursor: pointer;
+	}
+}
+
+@media (max-width: 376px) {
+	.dropdown-container {
+		right: 0;
+	}
+}
